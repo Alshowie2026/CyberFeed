@@ -1,0 +1,53 @@
+{
+  "measuredAt": "2026-09-21T13:34:29.074Z",
+  "node": "v22.23.2",
+  "platform": "win32",
+  "cpu": "Intel(R) Core(TM) i7-10850H CPU @ 2.70GHz",
+  "logicalCpus": 6,
+  "totalMemoryMiB": 32612.34,
+  "threadPool": 8,
+  "activeHashLimit": 4,
+  "queuedHashLimit": 64,
+  "scrypt": {
+    "N": 131072,
+    "r": 8,
+    "p": 1,
+    "keyLength": 64
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "registrationP95Ms": 2694.6,
+      "loginP95Ms": 2701.44
+    },
+    {
+      "round": 2,
+      "registrationP95Ms": 2733.26,
+      "loginP95Ms": 2670.26
+    },
+    {
+      "round": 3,
+      "registrationP95Ms": 2700.58,
+      "loginP95Ms": 2707.27
+    },
+    {
+      "round": 4,
+      "registrationP95Ms": 2708.85,
+      "loginP95Ms": 2839.91
+    },
+    {
+      "round": 5,
+      "registrationP95Ms": 2664.41,
+      "loginP95Ms": 2825.32
+    }
+  ],
+  "requests": 200,
+  "successes": 200,
+  "errors": [],
+  "registrationP95Ms": 2705.83,
+  "loginP95Ms": 2822.19,
+  "hashQueueP95Ms": 2153.58,
+  "peakRssMiB": 599.67,
+  "passed": false,
+  "scope": "Local HTTP load, 20 concurrent distinct users, 5 rounds; not human usability or deployment certification."
+}

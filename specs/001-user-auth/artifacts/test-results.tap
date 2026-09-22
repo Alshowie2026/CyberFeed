@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: hash work is bounded to four active plus 64 waiting and recovers after errors
+ok 1 - hash work is bounded to four active plus 64 waiting and recovers after errors
+  ---
+  duration_ms: 6.6028
+  type: 'test'
+  ...
+# Subtest: HTTP admission rejects overload with Retry-After without creating extra users
+ok 2 - HTTP admission rejects overload with Retry-After without creating extra users
+  ---
+  duration_ms: 845.6636
+  type: 'test'
+  ...
+# Subtest: sessions: login, restore, restart, exact expiry and cookie flags
+ok 3 - sessions: login, restore, restart, exact expiry and cookie flags
+  ---
+  duration_ms: 1025.6166
+  type: 'test'
+  ...
+# Subtest: logout revokes reused token; login replaces only current device session
+ok 4 - logout revokes reused token; login replaces only current device session
+  ---
+  duration_ms: 2058.6567
+  type: 'test'
+  ...
+# Subtest: identical credential errors and fifth/sixth lockout including unknown names and restart
+ok 5 - identical credential errors and fifth/sixth lockout including unknown names and restart
+  ---
+  duration_ms: 6221.4377
+  type: 'test'
+  ...
+# Subtest: concurrent failures cannot bypass lockout; independent names and successful reset
+ok 6 - concurrent failures cannot bypass lockout; independent names and successful reset
+  ---
+  duration_ms: 5039.2011
+  type: 'test'
+  ...
+# Subtest: rolling failure window excludes timestamps exactly 15 minutes old; malformed login not counted
+ok 7 - rolling failure window excludes timestamps exactly 15 minutes old; malformed login not counted
+  ---
+  duration_ms: 3419.2298
+  type: 'test'
+  ...
+# Subtest: password is exact including spaces and Arabic, and response/logs contain no secrets
+ok 8 - password is exact including spaces and Arabic, and response/logs contain no secrets
+  ---
+  duration_ms: 1525.8404
+  type: 'test'
+  ...
+# Subtest: failed login/logout persistence never claims successful state changes
+ok 9 - failed login/logout persistence never claims successful state changes
+  ---
+  duration_ms: 1548.8317
+  type: 'test'
+  ...
+# Subtest: production requires HTTPS origin and emits Secure host-only cookie
+ok 10 - production requires HTTPS origin and emits Secure host-only cookie
+  ---
+  duration_ms: 1456.1629
+  type: 'test'
+  ...
+# Subtest: registration returns only public identity, no cookie, and persists across restart
+ok 11 - registration returns only public identity, no cookie, and persists across restart
+  ---
+  duration_ms: 548.0508
+  type: 'test'
+  ...
+# Subtest: twenty canonical-name registrations create exactly one account
+ok 12 - twenty canonical-name registrations create exactly one account
+  ---
+  duration_ms: 528.8701
+  type: 'test'
+  ...
+# Subtest: registration validates Unicode names and exact password boundaries
+ok 13 - registration validates Unicode names and exact password boundaries
+  ---
+  duration_ms: 3570.9494
+  type: 'test'
+  ...
+# Subtest: registration failure never creates a partial account or exposes secrets
+ok 14 - registration failure never creates a partial account or exposes secrets
+  ---
+  duration_ms: 1522.9372
+  type: 'test'
+  ...
+# Subtest: request security and error responses have consistent JSON contracts
+ok 15 - request security and error responses have consistent JSON contracts
+  ---
+  duration_ms: 162.7593
+  type: 'test'
+  ...
+# Subtest: feed is public; posting needs a current session and derives identity
+ok 16 - feed is public; posting needs a current session and derives identity
+  ---
+  duration_ms: 2315.3516
+  type: 'test'
+  ...
+# Subtest: legacy records retain all original fields and are never claimed by matching usernames
+ok 17 - legacy records retain all original fields and are never claimed by matching usernames
+  ---
+  duration_ms: 1035.5201
+  type: 'test'
+  ...
+# Subtest: post boundaries use code points and failed writes leave no partial post
+ok 18 - post boundaries use code points and failed writes leave no partial post
+  ---
+  duration_ms: 1161.206
+  type: 'test'
+  ...
+# Subtest: logout and publication have explicit commit ordering
+ok 19 - logout and publication have explicit commit ordering
+  ---
+  duration_ms: 1992.3014
+  type: 'test'
+  ...
+# Subtest: initializes only missing files and preserves legacy posts and orphan temps
+ok 20 - initializes only missing files and preserves legacy posts and orphan temps
+  ---
+  duration_ms: 37.9084
+  type: 'test'
+  ...
+# Subtest: corrupt and unsupported files fail closed without overwrite
+ok 21 - corrupt and unsupported files fail closed without overwrite
+  ---
+  duration_ms: 22.7954
+  type: 'test'
+  ...
+# Subtest: write and rename failures preserve committed disk and memory; queue recovers
+ok 22 - write and rename failures preserve committed disk and memory; queue recovers
+  ---
+  duration_ms: 21.9054
+  type: 'test'
+  ...
+# Subtest: serial commits do not overwrite one another and snapshots cannot mutate storage
+ok 23 - serial commits do not overwrite one another and snapshots cannot mutate storage
+  ---
+  duration_ms: 306.0103
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 29814.1225

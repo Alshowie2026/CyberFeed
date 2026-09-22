@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090f1c">
+    <title>CyberFeed</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#feed-heading">Skip to posts</a>
+    <header class="topbar">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a class="brand" href="/" aria-label="CyberFeed home">
+          <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3 27 8v8c0 7-11 13-11 13S5 23 5 16V8L16 3Z" stroke="currentColor" stroke-width="2"/><path d="m12 12-4 4 4 4m8-8 4 4-4 4m-3-10-2 12" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>Cyber<span class="brand-accent">Feed</span></span>
+        </a>
+        <div class="nav-actions">
+          <div id="signed-in" class="user-menu" hidden>
+            <span class="user-identity"><span class="status-dot" aria-hidden="true"></span><strong id="current-user"></strong></span>
+            <button id="logout" class="button-quiet" type="button">Exit <span aria-hidden="true">↗</span></button>
+          </div>
+          <button id="nav-login" class="button-small" type="button" aria-controls="account-panel" aria-expanded="false">Login <span aria-hidden="true">↗</span></button>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero" aria-labelledby="page-heading">
+        <div class="hero-copy">
+          <p class="eyebrow"><span aria-hidden="true">//</span> THE CYBERSECURITY COMMUNITY</p>
+          <h1 id="page-heading">Stay curious.<br><span>Stay ahead.</span></h1>
+          <p class="hero-description">A space for security insights, new discoveries, and conversations that keep us learning.</p>
+          <a class="text-link" href="#feed-heading">Explore the feed <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
+          <svg viewBox="0 0 120 140" fill="none"><path d="M60 9 105 28v39c0 31-45 63-45 63S15 98 15 67V28L60 9Z" stroke="currentColor" stroke-width="2"/><path d="M60 24 91 37v30c0 21-31 46-31 46S29 88 29 67V37l31-13Z" stroke="currentColor" stroke-opacity=".25"/><path d="m48 55-12 12 12 12m24-24 12 12-12 12M66 47 54 87" stroke="currentColor" stroke-width="3"/></svg>
+          <span class="art-node node-one"></span><span class="art-node node-two"></span>
+        </div>
+      </section>
+      <p id="auth-message" class="message account-feedback" role="status" aria-live="polite"></p>
+      <section id="account-panel" class="account panel" aria-labelledby="account-heading" hidden>
+        <div class="section-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h2 id="account-heading">Join the conversation.</h2></div><button id="close-account" class="button-quiet" type="button" aria-label="Close account form">✕</button></div>
+        <div id="visitor">
+          <div class="account-modes" aria-label="Account options">
+            <button id="login-mode" type="button" aria-pressed="true">Sign in</button>
+            <button id="register-mode" type="button" aria-pressed="false">Create account</button>
+          </div>
+          <form id="auth-form" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="username-help" placeholder="Your unique username" required>
+            <p id="username-help" class="hint">3–30 Arabic or English letters, digits, or underscores.</p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" aria-describedby="password-help" placeholder="Enter your password" required>
+            <p id="password-help" class="hint">15–128 characters. Spaces are allowed and count.</p>
+            <button id="auth-submit" type="submit">Sign in</button>
+          </form>
+        </div>
+      </section>
+      <section class="feed-section" aria-labelledby="feed-heading">
+        <div class="section-heading"><div><p class="eyebrow">FROM THE COMMUNITY</p><h2 id="feed-heading" tabindex="-1">The feed<span class="heading-dot">.</span></h2></div><span id="post-count" class="count-label" aria-live="polite"></span></div>
+        <div id="feed" class="feed"></div>
+      </section>
+      <footer class="page-footer"><span>CyberFeed</span><span>Learn. Share. Stay curious.</span></footer>
+    </main>
+    <button id="new-post" class="floating-post" type="button" aria-label="Create a post" title="Create a post" aria-haspopup="dialog" aria-controls="composer-dialog" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14.5 5.5 4 4M4 20l4.5-1L20 7.5a2.83 2.83 0 0 0-4-4L4.5 15 4 20Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 20h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <dialog id="composer-dialog" class="composer-dialog" aria-labelledby="composer-title">
+      <form id="post-form" class="composer panel">
+        <div class="composer-heading"><div><p class="eyebrow">YOUR NEXT CONTRIBUTION</p><h2 id="composer-title">Create a post<span class="heading-dot">.</span></h2></div><button id="close-composer" class="button-quiet" type="button" aria-label="Close post editor">✕</button></div>
+        <label for="text">Post text</label>
+        <textarea id="text" name="text" rows="6" aria-describedby="text-help" placeholder="What would you like to share?" required></textarea>
+        <div id="composer-actions" class="composer-bottom"><p id="text-help" class="hint">Up to 2,000 characters. You can draft now and sign in to publish.</p><button id="publish" type="submit"><span id="publish-label">Login to publish</span> <span aria-hidden="true">↗</span></button></div>
+        <p id="form-message" class="message" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+    <script src="app.js" defer></script>
+  </body>
+</html>
