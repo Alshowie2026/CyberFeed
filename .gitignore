@@ -1,5 +1,5 @@
 node_modules/
 simple-posts/node_modules/
-simple-posts/data/*.json
+simple-posts/data/*.tmp
 *.log
 .env
