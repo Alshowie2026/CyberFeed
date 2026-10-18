@@ -12,5 +12,12 @@
     "userId": "34b10b0f-e1c2-4f4d-848c-0a7b08b29eb5",
     "text": "🚨 Phishing Campaign Detected\n\nA simulated phishing campaign was observed targeting employees through fake account-verification emails. The messages attempted to redirect users to a credential-harvesting page and download a suspicious attachment.\n\nIndicators of Compromise (IOCs):\n\nSource IP: 198.51.100.77\nDomain: secure-login-test.example\nURL: https://secure-login-test.example/account/verify\nEmail: [security-alert@example.com](mailto:security-alert@example.com)\nMD5: d41d8cd98f00b204e9800998ecf8427e\nSHA-256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n\nThreat Type: Phishing / Credential Theft\nSeverity: Medium\n\nAll indicators in this post are synthetic and intended only for CTI pipeline and IOC extraction testing.",
     "created_at": "2026-09-23T14:06:22.989Z"
+  },
+  {
+    "id": 3,
+    "name": "Alaaldeen",
+    "userId": "3516e7aa-6a56-47b0-bcf5-015ce83d3a06",
+    "text": "⚠️ Security Alert — Simulated FTP Honeypot Activity\n\nA simulated suspicious FTP session was observed in the ACTIT test environment. The activity originated from 198.51.100.77 and targeted the Dionaea honeypot at 172.30.0.2 on TCP port 21.\n\nThe session included six credential attempts using multiple usernames, followed by FTP commands associated with retrieving a test file named payload.bin.\n\nIndicators of Compromise (IOCs):\nSource IPv4: 198.51.100.77\nTarget IPv4: 172.30.0.2\nTarget Port: 21\nProtocol: FTP\nObserved File: payload.bin\n\nObserved Commands:\n- USER\n- PASS\n- RETR\n\nThreat Type: Credential Attack / Suspicious File Retrieval\nSeverity: High\n\nThis activity and all included indicators are synthetic and intended exclusively for cybersecurity testing and ACTIT correlation validation.",
+    "created_at": "2026-10-18T07:40:05.832Z"
   }
 ]
