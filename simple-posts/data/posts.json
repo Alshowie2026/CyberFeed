@@ -19,5 +19,12 @@
     "userId": "3516e7aa-6a56-47b0-bcf5-015ce83d3a06",
     "text": "⚠️ Security Alert — Simulated FTP Honeypot Activity\n\nA simulated suspicious FTP session was observed in the ACTIT test environment. The activity originated from 198.51.100.77 and targeted the Dionaea honeypot at 172.30.0.2 on TCP port 21.\n\nThe session included six credential attempts using multiple usernames, followed by FTP commands associated with retrieving a test file named payload.bin.\n\nIndicators of Compromise (IOCs):\nSource IPv4: 198.51.100.77\nTarget IPv4: 172.30.0.2\nTarget Port: 21\nProtocol: FTP\nObserved File: payload.bin\n\nObserved Commands:\n- USER\n- PASS\n- RETR\n\nThreat Type: Credential Attack / Suspicious File Retrieval\nSeverity: High\n\nThis activity and all included indicators are synthetic and intended exclusively for cybersecurity testing and ACTIT correlation validation.",
     "created_at": "2026-10-18T07:40:05.832Z"
+  },
+  {
+    "id": 4,
+    "name": "Alaaldeen",
+    "userId": "3516e7aa-6a56-47b0-bcf5-015ce83d3a06",
+    "text": "⚠️ Security Alert — Simulated FTP Credential Attack\n\nMultiple FTP authentication attempts were detected from the test address 198.51.100.77 against a laboratory Dionaea honeypot.\n\nObserved usernames included:\n- admin\n- root\n- test\n- service\n- operator\n- guest\n\nIndicators of Compromise (IOCs):\nSource IPv4: 198.51.100.77\nTarget IPv4: 172.30.0.2\nTarget Port: 21\nProtocol: FTP\n\nThreat Type: Credential Attack\nSeverity: High\n\nAll indicators and activities are synthetic and intended exclusively for ACTIT testing and correlation validation.",
+    "created_at": "2026-10-18T09:57:13.634Z"
   }
 ]
